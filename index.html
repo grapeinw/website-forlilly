@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คิดถึง</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffe6e6;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+    }
+    .text {
+      font-size: 5vw;
+      color: #ff3399;
+      font-weight: bold;
+      animation: zoom 0.5s ease-in-out infinite alternate;
+    }
+    @keyframes zoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="text">คิดถึง</div>
+
+  <script>
+    setInterval(() => {
+      const newText = document.createElement('div');
+      newText.className = 'text';
+      newText.innerText = 'คิดถึง';
+      newText.style.position = 'absolute';
+      newText.style.top = `${Math.random() * 100}vh`;
+      newText.style.left = `${Math.random() * 100}vw`;
+      document.body.appendChild(newText);
+    }, 500);
+  </script>
+</body>
+</html>
